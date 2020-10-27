@@ -40,6 +40,8 @@ class Order(models.Model):
     transaction_id_final_payment = models.CharField(
         max_length=255, blank=True, null=True)
     payment_mode = models.CharField(max_length=100, blank=True, null=True)
+    date_ordered = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
 
     # def __str__(self):
     #     return '{}'.format()
